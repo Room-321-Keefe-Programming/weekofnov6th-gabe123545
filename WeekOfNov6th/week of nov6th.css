@@ -1,0 +1,13 @@
+#TemperatureArea {
+	margin:auto;
+}
+#inputBox, #inputBox2 {
+		width: 200px;
+		height: 30px;
+		border: 1px solid black; 
+}
+#outputBox {
+	width: 414px;
+		height: 100px;
+		border: 1px solid black; 
+}

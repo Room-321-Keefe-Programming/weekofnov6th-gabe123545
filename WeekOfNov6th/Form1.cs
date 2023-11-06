@@ -64,14 +64,18 @@ namespace WeekOfNov6th
         private void btnDistance_Click(object sender, EventArgs e)
         {
             var input2 = txtInput2.Text;
-
+            
+            if (input2 == "")
+            {
+                rtbOutput.Text += "type something";
+            }
             if (chkMileToKilo.Checked)
             {
-                rtbOutput.Text += (float.Parse(input2) * 1.60934) + " Km" + Environment.NewLine; 
+                rtbOutput.Text += (float.Parse(input2) * 1.61) + " Km" + Environment.NewLine; 
             }
-            else if (chkMeterToInch.Checked)
+            if (chkMeterToInch.Checked)
             {
-                rtbOutput.Text += (float.Parse(input2) * 39.37006655984252) + " In" + Environment.NewLine;
+                rtbOutput.Text += (float.Parse(input2) * 39.37) + " In" + Environment.NewLine;
             }
         }
 
@@ -80,11 +84,11 @@ namespace WeekOfNov6th
             var input2 = txtInput2.Text;
             if (chkKiloToMiles.Checked)
             {
-                rtbOutput.Text += (float.Parse(input2) * 0.621371) + " Miles" + Environment.NewLine;
+                rtbOutput.Text += (float.Parse(input2) * 0.62) + " Miles" + Environment.NewLine;
             }
             else if (chkInchToMeter.Checked)
             {
-                rtbOutput.Text += (float.Parse(input2) * 0.025399992141747998464) + " Meters" + Environment.NewLine;
+                rtbOutput.Text += (float.Parse(input2) * 0.025) + " Meters" + Environment.NewLine;
             }
         }
     }

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang = "en">
+	<head>
+		<meta charset="utf-8" />
+		<script src ="week of nov 6th.js"></script>
+		<link rel ="stylesheet" href ="week of nov6th.css">
+	</head>
+	<body>
+		<div id="TemperatureArea">
+			<h2>Temperature converter</h2>
+			<input type = "Radio" id = "radio1" name = "CelsuisToFarenheit">
+			<label for ="CelsuisToFarenheit">Celsuis - Fahrenheit</label>
+			<input type = "Radio" id = "radio2" name = "FahrenheitToCelsuis">
+			<label for ="FahrenheitToCelsuis">Fahrenheit - Celsuis</label>
+			<input type="button" id = "btnTemperature" value = "Temperature" onclick = "ConvertTemp();">	
+		</div>
+		<div id = "dropDownMenu">
+			<label for="money">Choose a currency:</label>
+			<select name="money" id="money">
+			  <option value="Dollar to Yen">Dollar to Yen</option>
+			  <option value="Yen to Dollar">Yen to Dollar</option>
+			  <option value="Dollar to Reais">Dollar to Reais</option>
+			  <option value="Reais to Dollar">Reais to Dollar</option>
+			  <option value="Rupees to Dollar">Rupees to Dollar</option>
+			  <option value="Dollar to Rupees">Dollar to Rupees</option>
+			</select>
+			<input type="button" id = "btnMoney" value = "Money" onclick = "ConvertMoney();">
+		</div>
+		<label for="milesToKilometers">Miles to Kilometers</label>
+		<input type="checkbox" id="chkMilesToKilometers" name="conversion" value="MilesToKilometers"><br>
+
+		<label for="kilometersToMiles">Kilometers to Miles</label>
+		<input type="checkbox" id="chkKilometersToMiles" name="conversion" value="KilometersToMiles"><br>
+
+		<label for="inchesToMeters">Inches to Meters</label>
+		<input type="checkbox" id="chkInchesToMeters" name="conversion" value="InchesToMeters"><br>
+
+		<label for="metersToInches">Meters to Inches</label>
+		<input type="checkbox" id="chkMetersToInches" name="conversion" value="MetersToInches"><br>
+		
+		<input type="button" id = "btnDistance" value = "distance1" onclick = "Direction1();">
+		<input type="button" id = "btnDistance2" value = "distance2" onclick = "Direction2();">
+		
+		<input type = "text" id = "inputBox">
+		<input type = "text" id = "inputBox2">
+		<div id = "outputBox"></div>
+	</body>
+</html>
