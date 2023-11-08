@@ -48,6 +48,10 @@
             this.chkInchToMeter = new System.Windows.Forms.CheckBox();
             this.chkKiloToMiles = new System.Windows.Forms.CheckBox();
             this.btnDistance2 = new System.Windows.Forms.Button();
+            this.btnLoadFiles = new System.Windows.Forms.Button();
+            this.btnWordCount = new System.Windows.Forms.Button();
+            this.btnArrayStuff = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.grpTempConverter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -268,11 +272,59 @@
             this.btnDistance2.UseVisualStyleBackColor = true;
             this.btnDistance2.Click += new System.EventHandler(this.btnDistance2_Click);
             // 
+            // btnLoadFiles
+            // 
+            this.btnLoadFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadFiles.Location = new System.Drawing.Point(846, 324);
+            this.btnLoadFiles.Name = "btnLoadFiles";
+            this.btnLoadFiles.Size = new System.Drawing.Size(106, 31);
+            this.btnLoadFiles.TabIndex = 20;
+            this.btnLoadFiles.Text = "Load Text";
+            this.btnLoadFiles.UseVisualStyleBackColor = true;
+            this.btnLoadFiles.Click += new System.EventHandler(this.btnLoadFiles_Click);
+            // 
+            // btnWordCount
+            // 
+            this.btnWordCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWordCount.Location = new System.Drawing.Point(846, 365);
+            this.btnWordCount.Name = "btnWordCount";
+            this.btnWordCount.Size = new System.Drawing.Size(114, 31);
+            this.btnWordCount.TabIndex = 21;
+            this.btnWordCount.Text = "word count";
+            this.btnWordCount.UseVisualStyleBackColor = true;
+            this.btnWordCount.Click += new System.EventHandler(this.btnWordCount_Click);
+            // 
+            // btnArrayStuff
+            // 
+            this.btnArrayStuff.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArrayStuff.Location = new System.Drawing.Point(846, 402);
+            this.btnArrayStuff.Name = "btnArrayStuff";
+            this.btnArrayStuff.Size = new System.Drawing.Size(103, 30);
+            this.btnArrayStuff.TabIndex = 22;
+            this.btnArrayStuff.Text = "Array Stuff";
+            this.btnArrayStuff.UseVisualStyleBackColor = true;
+            this.btnArrayStuff.Click += new System.EventHandler(this.btnArrayStuff_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Location = new System.Drawing.Point(612, 389);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(166, 69);
+            this.btnReset.TabIndex = 23;
+            this.btnReset.Text = "RESET";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 648);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnArrayStuff);
+            this.Controls.Add(this.btnWordCount);
+            this.Controls.Add(this.btnLoadFiles);
             this.Controls.Add(this.btnDistance2);
             this.Controls.Add(this.chkKiloToMiles);
             this.Controls.Add(this.chkInchToMeter);
@@ -322,6 +374,10 @@
         private System.Windows.Forms.CheckBox chkInchToMeter;
         private System.Windows.Forms.CheckBox chkKiloToMiles;
         private System.Windows.Forms.Button btnDistance2;
+        private System.Windows.Forms.Button btnLoadFiles;
+        private System.Windows.Forms.Button btnWordCount;
+        private System.Windows.Forms.Button btnArrayStuff;
+        private System.Windows.Forms.Button btnReset;
     }
 }
 
