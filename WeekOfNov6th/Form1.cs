@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -136,14 +137,28 @@ namespace WeekOfNov6th
 
         private void btnLoadFiles_Click(object sender, EventArgs e)
         {
-            string FilePath = "C:\\Users\\gabe\\source\\repos\\weekofnov6th-gabe123545\\WeekOfNov6th\\bin\\test.txt";
-            string FileContents = File.ReadAllText(FilePath);
-            rtbOutput.Text += FileContents + Environment.NewLine;
+            string file = "test.txt";
+
+            try
+            {
+                using (StreamReader reader = new StreamReader(file))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        rtbOutput.Text += line;
+                    }
+                }
+            }
+            catch (Exception exp)
+            {
+                Console.WriteLine(exp.Message);
+            }
         }
 
         private void btnWordCount_Click(object sender, EventArgs e)
         {
-            string FilePath = "C:\\Users\\gabe\\source\\repos\\weekofnov6th-gabe123545\\WeekOfNov6th\\bin\\test.txt";
+            string FilePath = "C:\\Users\\gabe\\source\\repos\\weekofnov6th-gabe123545\\WeekOfNov6th\\text files\\test.txt";
             string FileContents = File.ReadAllText(FilePath);
             string[] filewords = FileContents.Split(' ');
             string input = txtInput1.Text + txtInput2.Text;
@@ -151,6 +166,10 @@ namespace WeekOfNov6th
 
             rtbOutput.Text = "";
 
+            if (input == "")
+            {
+                rtbOutput.Text += "please type something into input box 1 and 2";
+            }
             for (int i = 0; i < filewords.Length; i+= input1int)
             {
                 rtbOutput.Text += filewords[i] + " " + Environment.NewLine;
